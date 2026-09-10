@@ -1,0 +1,32 @@
+{
+  "name": "shadowfiend/xai-whisper-provider",
+  "description": "xAI provider for shadowfiend/whisper",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.4",
+    "shadowfiend/whisper": "^0.1",
+    "guzzlehttp/psr7": "^3.0",
+    "psr/http-client": "^1.0",
+    "psr/http-factory": "^1.1",
+    "psr/http-message": "^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^12.0",
+    "phpstan/phpstan": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sf\\Xai\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sf\\Xai\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit tests",
+    "lint": "phpstan analyse --configuration=phpstan.neon"
+  }
+}
